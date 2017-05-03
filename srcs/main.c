@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:22:43 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/03 12:04:00 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 13:15:54 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		main(int argc, const char *argv[])
 	read(fd, buf, BUF_SIZE);
 	if (!(ft_check_file(buf)))
 	{
-		ft_putendl_fd("error");
+		ft_putendl("error");
 		return (-1);
 	}
 	if (close(fd) == -1)

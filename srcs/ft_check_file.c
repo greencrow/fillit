@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/02 13:44:05 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/03 12:00:10 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 13:37:33 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static t_tetriminos	*ft_get_tetriminos(char *file, int i)
 {
-	t_tetriminos	ret;
+t_tetriminos	ret;
 
 	while (file[i])
 	{
