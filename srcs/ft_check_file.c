@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/02 13:44:05 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/02 14:42:03 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 12:00:10 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,15 @@
 static t_tetriminos	*ft_get_tetriminos(char *file, int i)
 {
 	t_tetriminos	ret;
-	int				*ptr;
 
-	ptr = &i;
-	while (file[*ptr])
+	while (file[i])
 	{
-		while (file[*ptr] != '\n' && file[*ptr + 1] != '\n');
-		{
-			while (file[*ptr] != '\n')
-				ret->line1 = file[*ptr++];
-			*ptr++;
-			while (file[*ptr] != '\n')
-				ret->line2 = file[*ptr++];
-			*ptr++;
-			while (file[*ptr] != '\n')
-				ret->line3 = file[*ptr++];
-			*ptr++;
-			while (file[*ptr] != '\n')
-				ret->line4 = file[*ptr++];
-			*ptr++;
-		}
+		ret.tetri = ft_strsplit(file, '\n');
+		if (file[i] == '\n' && file[i + 1] == '\n')
+			return (&ret);
+		i++;
 	}
+	return (NULL);
 }
 
 static t_bool		ft_check_tetriminos(t_tetriminos to_check)
@@ -46,6 +34,7 @@ static t_bool		ft_check_tetriminos(t_tetriminos to_check)
 t_bool				ft_check_file(char *buf)
 {
 	int		i;
+	t_tetriminos test;
 
 	i = 0;
 	while (*buf)

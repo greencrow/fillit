@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:22:43 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/02 14:43:11 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 12:04:00 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include "libft.h"
+#include "fillit.h"
 
 int		main(int argc, const char *argv[])
 {
 	int		fd;
 	char	*buf;
 
+	buf = (char *)malloc(sizeof(char) * BUF_SIZE);
 	(void)argv;
 	if (argc != 2)
 	{
