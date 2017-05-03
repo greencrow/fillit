@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/27 16:22:43 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/03 13:15:54 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 14:39:42 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,29 +20,19 @@ int		main(int argc, const char *argv[])
 {
 	int		fd;
 	char	*buf;
+	int		error;
 
 	buf = (char *)malloc(sizeof(char) * BUF_SIZE);
+	error = 0;
 	(void)argv;
-	if (argc != 2)
-	{
-		ft_putendl_fd("usage:\t./fillit map_file", 1);
+	error = (argc != 2) ? 1 : 0;
+	fd = open(argv[1], O_RDONLY);
+	error = (fd == 0) ? 0 : 2; 
+	if (error == 0)
+		read(fd, buf, BUF_SIZE);
+	//error = (ft_check_file(buf)) ? 0 : 3;
+	ft_print_error(error);
+	if (error != 0)
 		return (-1);
-	}
-	if((fd = open(argv[1], O_RDONLY) == -1))
-	{
-		ft_putendl_fd("Err:\topen() failed", 1);
-		return (-1);
-	}
-	read(fd, buf, BUF_SIZE);
-	if (!(ft_check_file(buf)))
-	{
-		ft_putendl("error");
-		return (-1);
-	}
-	if (close(fd) == -1)
-	{
-		ft_putendl_fd("Err:\tclose() failed", 1);
-		return (-1);
-	}
 	return (0);
 }

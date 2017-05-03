@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/28 14:26:07 by svigouro          #+#    #+#             */
-/*   Updated: 2017/05/03 11:39:00 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/03 14:25:39 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ typedef int		t_bool;
 typedef char	*t_square;
 
 t_bool			ft_check_file(char *buf);
+void			ft_print_error(int type);
 
 #endif

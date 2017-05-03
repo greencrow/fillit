@@ -6,7 +6,7 @@
 #    By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/27 16:07:06 by svigouro          #+#    #+#              #
-#    Updated: 2017/05/03 11:42:31 by svigouro         ###   ########.fr        #
+#    Updated: 2017/05/03 14:31:24 by svigouro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ IN_DIR 	= 	includes
 L_DIR 	= 	libft
 
 RAW_SRC = 	main.c \
+			ft_print_error.c \
 			ft_check_file.c
 OBJ 	= 	$(RAW_SRC:%.c=%.o)
 SRC		=	$(addprefix $(SRC_DIR)/,$(RAW_SRC))
