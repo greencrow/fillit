@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/28 14:26:07 by svigouro          #+#    #+#             */
-/*   Updated: 2017/04/28 15:41:18 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/05/02 14:40:09 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 
 # define TRUE 1
 # define FALSE 0
+# define BUF_SIZE 4096
+
 
 typedef struct	s_tetriminos
 {
-	size_t	length;
-	size_t	height;
 	char	*line1;
 	char	*line2;
 	char	*line3;
