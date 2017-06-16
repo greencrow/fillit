@@ -6,7 +6,7 @@
 /*   By: svigouro <svigouro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 16:36:16 by laranda           #+#    #+#             */
-/*   Updated: 2017/06/06 17:24:38 by svigouro         ###   ########.fr       */
+/*   Updated: 2017/06/16 16:41:44 by svigouro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int		main(int argc, char **argv)
 		else
 			ft_putstr("error\n");
 	}
+	else
+		ft_putstr("usage: ./fillit map_file\n");
 	return (0);
 }
